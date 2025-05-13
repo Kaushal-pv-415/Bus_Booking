@@ -1,0 +1,110 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: black;
+}
+
+.container {
+    max-width: 600px;
+    margin: 50px auto;
+    background: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    text-align: center;
+    color: #333;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+select, input[type="text"], input[type="number"], button {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+input[readonly] {
+    background-color: #e9ecef;
+}
+
+/* Seat Selection */
+#seatSelection {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
+    margin-bottom: 15px;
+}
+
+.seat-row {
+    display: flex;
+    gap: 5px;
+}
+
+.seat:nth-child(2) {
+    margin-right: 20px; /* Creates space between column 2 and 3 */
+}
+
+
+.seat {
+    width: 40px;
+    height: 40px;
+    font-size: 14px;
+    text-align: center;
+    border: 1px solid #007bff;
+    background-color: black;
+    cursor: pointer;
+    transition: 0.2s;
+    border-radius: 5px;
+}
+
+.seat:hover {
+    background-color: #d0e2ff;
+}
+
+.seat.selected {
+    background-color: #007bff;
+    color: white;
+}
+
+/* Ticket Details */
+#ticket {
+    border: 2px solid #007bff;
+    padding: 15px;
+    border-radius: 8px;
+    background: #f9f9f9;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+#ticket h2 {
+    color: #007bff;
+    text-align: center;
+}
+

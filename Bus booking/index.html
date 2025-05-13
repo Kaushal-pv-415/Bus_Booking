@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bus Booking</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Bus Booking</h1>
+        <form id="bookingForm">
+            <div class="form-group">
+                <label for="userName">Name:</label>
+                <input type="text" id="userName" name="userName" required>
+            </div>
+            <div class="form-group">
+                <label for="phoneNumber">Phone Number:</label>
+                <input type="text" id="phoneNumber" name="phoneNumber" pattern="[0-9]{10}" required>
+            </div>
+            <div class="form-group">
+                <label for="startPoint">Start Point:</label>
+                <select id="startPoint" name="startPoint" required>
+                    <option value="" disabled selected>Select Start Point</option>
+                    <option value="hyderabad">Hyderabad</option>
+                    <option value="visakhapatnam">Visakhapatnam</option>
+                    <option value="chennai">Chennai</option>
+                    <option value="bangalore">Bangalore</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="endPoint">End Point:</label>
+                <select id="endPoint" name="endPoint" required>
+                    <option value="" disabled selected>Select End Point</option>
+                    <option value="hyderabad">Hyderabad</option>
+                    <option value="visakhapatnam">Visakhapatnam</option>
+                    <option value="chennai">Chennai</option>
+                    <option value="bangalore">Bangalore</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label>Select Seats:</label>
+                <div id="seatSelection"></div>
+            </div>
+            <div class="form-group">
+                <button type="button" id="calculateCost">Calculate Cost</button>
+            </div>
+            <div class="form-group">
+                <label for="totalCost">Total Cost:</label>
+                <input type="text" id="totalCost" name="totalCost" readonly>
+            </div>
+            <div class="form-group">
+                <label for="paymentMethod">Payment Method:</label>
+                <select id="paymentMethod" name="paymentMethod" required>
+                    <option value="" disabled selected>Select Payment Method</option>
+                    <option value="credit">Credit Card</option>
+                    <option value="debit">Debit Card</option>
+                    <option value="upi">UPI</option>
+                    <option value="netbanking">Net Banking</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <button type="submit">Book Tickets</button>
+            </div>
+        </form>
+        <div id="ticket" style="display:none; margin-top: 20px;">
+            <h2>Booking Details</h2>
+            <p><strong>Name:</strong> <span id="displayName"></span></p>
+            <p><strong>Phone Number:</strong> <span id="displayPhone"></span></p>
+            <p><strong>From:</strong> <span id="displayStart"></span></p>
+            <p><strong>To:</strong> <span id="displayEnd"></span></p>
+            <p><strong>Seats:</strong> <span id="displaySeats"></span></p>
+            <p><strong>Total Cost:</strong> <span id="displayCost"></span></p>
+            <p><strong>Payment Method:</strong> <span id="displayPayment"></span></p>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
